@@ -1,11 +1,10 @@
 object session {
-  1+2
 
   def sqrt(x:Double) = {
     def abs(x: Double) = if(x < 0) -x else x
 
     def isGoodEnough(guess: Double): Boolean =
-      abs(guess * guess - x) / x < 0.001
+      abs(guess * guess - x) / x < 0.0001
 
     def improve(guess: Double): Double =
       (guess + x / guess) / 2
@@ -30,8 +29,8 @@ object session {
 
   }
 
+  def gcd(a: Int, b: Int): Int = if(b == 0) a else gcd(b, a % b)
 
 
-  factorial(3)
 
 }
